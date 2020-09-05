@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 import requests as req
 import json,sys,time
+import telepot
 #先注册azure应用,确保应用有以下权限:
 #files:	Files.Read.All、Files.ReadWrite.All、Sites.Read.All、Sites.ReadWrite.All
 #user:	User.Read.All、User.ReadWrite.All、Directory.Read.All、Directory.ReadWrite.All
@@ -14,6 +15,11 @@ import json,sys,time
 
 path=sys.path[0]+r'/1.txt'
 num1 = 0
+token=str(sys.argv[1])
+chat_id=str(sys.argv[2])
+
+def send(message):
+    bot.sendMessage(chat_id,message, parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
 
 def gettoken(refresh_token):
     headers={'Content-Type':'application/x-www-form-urlencoded'
@@ -82,3 +88,5 @@ def main():
         pass
 for _ in range(3):
     main()
+    msg='[AutoApiSecret]已成功调用{}次，结束时间为{}'.format(num1,localtime)
+    send(msg)
