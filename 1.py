@@ -17,6 +17,7 @@ path=sys.path[0]+r'/1.txt'
 num1 = 0
 token=str(sys.argv[1])
 chat_id=str(sys.argv[2])
+fin=None
 
 def send(message):
     bot.sendMessage(chat_id,message, parse_mode=None, disable_web_page_preview=None, disable_notification=None, reply_to_message_id=None, reply_markup=None)
@@ -42,7 +43,8 @@ def main():
     refresh_token = fo.read()
     fo.close()
     global num1
-    localtime = time.asctime( time.localtime(time.time()) )
+    global fin
+    fin = localtime = time.asctime( time.localtime(time.time()) )
     access_token=gettoken(refresh_token)
     headers={
     'Authorization':access_token,
@@ -88,5 +90,5 @@ def main():
         pass
 for _ in range(3):
     main()
-    msg='[AutoApiSecret]已成功调用{}次，结束时间为{}'.format(num1,localtime)
+    msg='[AutoApiSecret]已成功调用{}次，结束时间为{}'.format(num1,fin)
     send(msg)
