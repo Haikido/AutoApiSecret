@@ -17,6 +17,7 @@ path=sys.path[0]+r'/1.txt'
 num1 = 0
 token=str(sys.argv[1])
 chat_id=str(sys.argv[2])
+bot=telepot.Bot(token)
 fin=None
 
 def send(message):
