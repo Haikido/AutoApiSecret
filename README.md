@@ -1,4 +1,7 @@
 # AutoApiSecret-加密版
+
+**添加了通过Telegram Bot反馈运行结果**
+
 AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 
 # 置顶 #
@@ -73,7 +76,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
      
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token地方.png)
   
-* 第三步，依次点击上栏Setting > Secrets > Add a new secret，新建两个secret如图：CONFIG_ID、CONFIG_KEY。
+* 第三步，依次点击上栏Setting > Secrets > Add a new secret，新建两个(或四个)secret如图：CONFIG_ID、CONFIG_KEY（TELEBOT_TOKEN、CHAT_ID）。
 
   内容分别如下: ( 把你的应用id改成你的应用id , 你的应用机密改成你的机密，单引号不要动 )
   
@@ -85,6 +88,44 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
   ```shell
   secret=r'你的应用机密'
   ```
+  
+  如果你想通过电报机器人提醒你运行结果，不时上去查看一下（虽然没必要，毕竟失败了会给你发邮件）
+  
+  在Telegram中找[BotFather](https://t.me/BotFather)新建一个机器人得到它的token
+  
+  ```shell
+  /newbot
+  
+  Alright, a new bot. How are we going to call it? Please choose a name for your bot.
+  
+  cctest
+  
+  Good. Now let's choose a username for your bot. It must end in `bot`. Like this, for example: TetrisBot or tetris_bot.
+  
+  cctest_bot
+  
+  Done! Congratulations on your new bot. You will find it at t.me/cctest_bot. You can now add a description, about section and profile picture for your bot, see /help for a list of commands. By the way, when you've finished creating your cool bot, ping our Bot Support if you want a better username for it. Just make sure the bot is fully operational before you do this.
+
+Use this token to access the HTTP API:
+1350221165:AAEVmPd4MMFaix8aDGrKZt85AvFp0BZO0zE
+Keep your token secure and store it safely, it can be used by anyone to control your bot.
+
+For a description of the Bot API, see this page: https://core.telegram.org/bots/api
+  ```
+  
+  TELEBOT_TOKEN
+  ```shell
+  机器人的token
+  ```
+  
+  CHAT_ID
+  ```shell
+  你的id
+  ```
+  
+  接着是找机器人[userinfobot](https://t.me/userinfobot)获取你的id
+  直接start就会返回你的id
+  
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/机密.png)
   
   最终格式应该是类似这样的：
