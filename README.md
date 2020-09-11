@@ -1,8 +1,6 @@
 # AutoApiSecret-加密版
 AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 
-测试
-
 # 置顶 #
 * 本项目是建立在[原教程](https://blog.432100.xyz/index.php/archives/50/)可以正确调用api的**假设**上的，核心是paran/黑幕大佬的py脚本。
 * 本项目只是提供一个自动、免费、无需额外设备的脚本运行方式，换句话说，**借用github的电脑/服务器来干活**。（因为原教程需要服务器/超长时间运转的设备，大部分人都不具备，本项目应运而生）
@@ -20,7 +18,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 * 原教程博主-黑幕（酷安id-Paran）：https://blog.432100.xyz/index.php/archives/50/
 * 普通版地址：https://github.com/wangziyingwen/AutoApi
 * 加密版地址（推荐）：https://github.com/wangziyingwen/AutoApiSecret
-* 模仿人为应用开发版（包含升级步骤）：https://github.com/wangziyingwen/AutoApiSR
+* 模仿人为应用开发版（包含升级步骤）：https://github.com/wangzyingwen/AutoApiSR
 * 超级版地址： https://github.com/wangziyingwen/AutoApiS
 * **常见错误及解决办法/更新日志**：https://github.com/wangziyingwen/Autoapi-test
 * 网页获取refresh_token小工具（不建议使用）：https://github.com/wangziyingwen/GetAutoApiToken
@@ -43,9 +41,24 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 
 --------------------------------------------------------------
 
-### 步骤 ###
-   *** **有错误/问题请看**:    [常见错误及解决办法/更新日志](https://github.com/wangziyingwen/Autoapi-test) ***   
+## 步骤 ##  
 
+   >:blush: :blush: :blush: :blush: :blush: :blush: 
+   
+   >请注意！请注意！请注意！
+   
+   >*** **有错误/问题请看**:    [常见错误及解决办法/更新日志](https://github.com/wangziyingwen/Autoapi-test)
+   
+   >*** 原教程/博客好像也坏了，看[视频教程](https://www.bilibili.com/video/av95688306/)吧，懒得补充，ORZ. （或者去网上搜一下，有一堆转载，关键词：github action e5 续期）
+   
+   >*** 注册应用时用到的[azure管理页面](https://portal.azure.com/)，或者直接到[仪表板](https://aad.portal.azure.com/)，找到注册应用选项
+   
+   >***【重定向URI】填写的内容：http://localhost:53682/
+
+   >*** rclone下载，请自行百度谷歌，官网好像是[rclone.org](https://rclone.org)
+   
+   >:anguished: :anguished: :anguished: :anguished: :anguished: :anguished:  
+  
 * 第一步，先大致浏览[原教程](https://blog.432100.xyz/index.php/archives/50/)，了解如何获取应用id、机密、refresh_token 3样东西，以方便接下来的操作。
 
 * 第二步，登陆/新建github账号，回到本项目页面，点击右上角fork本项目的代码到你自己的账号，然后你账号下会出现一个一模一样的项目，接下来的操作均在你的这个项目下进行。（看不到图片/图裂请科学上网）
