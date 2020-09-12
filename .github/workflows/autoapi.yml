@@ -15,8 +15,6 @@ on:
     types: [started]
   workflow_dispatch:
     inputs:
-      name:
-        description: '手动运行'
    
 jobs:
   build:
