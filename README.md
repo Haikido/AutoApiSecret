@@ -1,6 +1,6 @@
 # AutoApiSecret-加密版
 
-**添加了通过电报机器人`Telegram Bot`反馈运行结果（邮件会在运行失败时由系统提醒，所以就不加入提醒避免垃圾邮件困扰，电报大家也只是偶尔看看就挺好的），由于`This Check was skipped`原因，取消了原来的点击`star`判断，换用手动点击`Run workflow`运行测试**
+**添加了通过电报机器人`Telegram Bot`反馈运行结果（邮件会在运行失败时由系统提醒，所以就不加入提醒避免垃圾邮件困扰，电报大家也只是偶尔看看就挺好的），由于`This Check was skipped`原因（单纯的强迫症，不想有多余的记录），取消了原来的点击`star`判断，换用手动点击`Run workflow`运行测试**
 
 AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 
@@ -147,7 +147,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/adminrepo.png)
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/workflow.png)
   
-* 第五步，点击`Actions`，All Workflows下点击`Auto Api Secret`就能看到`Run workflow`按钮，点击就可手动运行一次，然后刷新一次就能看到它在运行了，点击去查看详情运行情况（如果运行成功并且你配置了电报机器人通知你会收到`[AutoApiSecret]已成功调用30次，结束时间为...`
+* 第五步，点击`Actions`，启用然后在All Workflows下点击`Auto Api Secret`就能看到`Run workflow`按钮，点击就可手动运行一次，然后刷新一次就能看到它在运行了，点击去查看详情运行情况（如果运行成功并且你配置了电报机器人通知你会收到`[AutoApiSecret]已成功调用30次，结束时间为...`，如果你的Actions中不显示workflow，可能是fork的原因，更改一下workflows的yml文件，加一个空格或空行之类的
 
 （必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认10个api调用成功了，默认是执行三遍，也就是要看到调用成功30个，就像图里的一样。如果少了几个api，要么是注册应用的时候赋予api权限没弄好；要么是没登录激活onedrive，登录激活一下）
 
