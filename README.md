@@ -1,10 +1,12 @@
 # AutoApiSecret-加密版
 
-**添加了通过Telegram Bot反馈运行结果**
+**添加了通过电报机器人Telegram Bot反馈运行结果（邮件会在运行失败时由系统提醒，所以就不加入提醒避免垃圾邮件困扰，电报大家也只是偶尔看看就挺好的），由于This Check was skipped原因，取消了原来的点击star判断，换用手动点击Run运行测试**
 
 AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 
 # 置顶 #
+## 原教程网站证书问题，大家自行搜索引擎搜索关键词github actions e5即可
+比如  https://www.daniao.org/9652.html  https://51.ruyo.net/15646.html
 * 本项目是建立在[原教程](https://blog.432100.xyz/index.php/archives/50/)可以正确调用api的**假设**上的，核心是paran/黑幕大佬的py脚本。
 * 本项目只是提供一个自动、免费、无需额外设备的脚本运行方式，换句话说，**借用github的电脑/服务器来干活**。（因为原教程需要服务器/超长时间运转的设备，大部分人都不具备，本项目应运而生）
 * 本项目运行依赖**github action**服务，此功能github固有而**非私人提供**的服务器，且整个运行过程只涉及你与github。
@@ -91,9 +93,8 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
   
   如果你想通过电报机器人提醒你运行结果，不时上去查看一下（虽然没必要，毕竟失败了会给你发邮件）
   
-  在Telegram中找[BotFather](https://t.me/BotFather)新建一个机器人得到它的token
-  
-  ```shell
+  在Telegram中找[BotFather](https://t.me/BotFather)新建一个机器人得到它的token 
+ ```shell
   /newbot
   
   Alright, a new bot. How are we going to call it? Please choose a name for your bot.
@@ -104,20 +105,19 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
   
   cctest_bot
   
-  Done! Congratulations on your new bot. You will find it at t.me/cctest_bot. You can now add a description, about section and profile picture for your bot, see /help for a list of commands. By the way, when you've finished creating your cool bot, ping our Bot Support if you want a better username for it. Just make sure the bot is fully operational before you do this.
+  Done! Congratulations on your new bot. You will find it at t.me/cctest_bot. You can now add a description, about section and profile picture for your bot, see /help for a list   of commands. By the way, when you've finished creating your cool bot, ping our Bot Support if you want a better username for it. Just make sure the bot is fully operational     before you do this.
 
-Use this token to access the HTTP API:
-1350221165:AAEVmPd4MMFaix8aDGrKZt85AvFp0BZO0zE
-Keep your token secure and store it safely, it can be used by anyone to control your bot.
+  Use this token to access the HTTP API:
+  这就是你的机器人token啦
+  Keep your token secure and store it safely, it can be used by anyone to control your bot.
 
-For a description of the Bot API, see this page: https://core.telegram.org/bots/api
-  ```
-  
+  For a description of the Bot API, see this page: https://core.telegram.org/bots/api
+
+ ``` 
   TELEBOT_TOKEN
-  ```shell
-  机器人的token
-  ```
-  
+ ```shell
+ 机器人的token
+ ```  
   CHAT_ID
   ```shell
   你的id
@@ -143,9 +143,9 @@ For a description of the Bot API, see this page: https://core.telegram.org/bots/
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/adminrepo.png)
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/workflow.png)
   
-* 第五步，点击右上角星星/star立马调用一次，再点击上面的Action就能看到每次的运行日志，看看运行状况
+* 第五步，点击`Actions`，All Workflows下点击`Auto Api Secret`就能看到`Run workflow`按钮，点击就可手动运行一次，然后刷新一次就能看到它在运行了，点击去查看详情运行情况（如果运行成功并且你配置了电报机器人通知你会收到`AutoApiSecret]已成功调用30次，结束时间为...`
 
-（必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认10个api调用成功了，就像图里的一样。如果少了几个api，要么是注册应用的时候赋予api权限没弄好；要么是没登录激活onedrive，登录激活一下）
+（必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认10个api调用成功了，默认是执行三遍，也就是要看到调用成功30个，就像图里的一样。如果少了几个api，要么是注册应用的时候赋予api权限没弄好；要么是没登录激活onedrive，登录激活一下）
 
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/日志.png)
 
