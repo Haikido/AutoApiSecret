@@ -17,8 +17,6 @@ on:
     inputs:
       name:
         description: '手动运行'
-        required: true
-        default: '手动运行'
    
 jobs:
   build:
