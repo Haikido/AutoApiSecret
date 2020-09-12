@@ -1,12 +1,14 @@
 # AutoApiSecret-加密版
 
-**添加了通过电报机器人Telegram Bot反馈运行结果（邮件会在运行失败时由系统提醒，所以就不加入提醒避免垃圾邮件困扰，电报大家也只是偶尔看看就挺好的），由于This Check was skipped原因，取消了原来的点击star判断，换用手动点击Run运行测试**
+**添加了通过电报机器人`Telegram Bot`反馈运行结果（邮件会在运行失败时由系统提醒，所以就不加入提醒避免垃圾邮件困扰，电报大家也只是偶尔看看就挺好的），由于`This Check was skipped`原因，取消了原来的点击`star`判断，换用手动点击`Run workflow`运行测试**
 
 AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
 
 # 置顶 #
 ## 原教程网站证书问题，大家自行搜索引擎搜索关键词github actions e5即可
-比如  https://www.daniao.org/9652.html  https://51.ruyo.net/15646.html
+比如  
+[利用Github Action刷Microsoft 365 E5开发者订阅API实现续订](https://51.ruyo.net/15646.html)
+[github actions自动调用api – 实现Microsoft 365 E5玄学订阅](https://www.daniao.org/9652.html) (也不知道都是谁写的，复制粘贴真简单)
 * 本项目是建立在[原教程](https://blog.432100.xyz/index.php/archives/50/)可以正确调用api的**假设**上的，核心是paran/黑幕大佬的py脚本。
 * 本项目只是提供一个自动、免费、无需额外设备的脚本运行方式，换句话说，**借用github的电脑/服务器来干活**。（因为原教程需要服务器/超长时间运转的设备，大部分人都不具备，本项目应运而生）
 * 本项目运行依赖**github action**服务，此功能github固有而**非私人提供**的服务器，且整个运行过程只涉及你与github。
@@ -75,6 +77,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
   然后在线编辑你项目里的1.txt，将整个refresh_token覆盖粘贴进去（里面是我的数据，先删掉或者覆盖掉）。（千万不要改1.py）
   
     > refresh_token位置如图下。复制refresh_token紧接着的双引号里的内容（红竖线框起来的），不要把双引号复制进去。复制进1.txt后，留意结尾不要留空格或者空行
+    (其实浏览器地址栏地址也能看出，不过还是保险点好，你也可以借助插件完成)
      
     ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/token地方.png)
   
