@@ -147,7 +147,7 @@ AutoApi系列：AutoApi、AutoApiSecret、AutoApiSR、AutoApiS
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/adminrepo.png)
   ![image](https://github.com/wangziyingwen/ImageHosting/blob/master/AutoApi/workflow.png)
   
-* 第五步，点击`Actions`，All Workflows下点击`Auto Api Secret`就能看到`Run workflow`按钮，点击就可手动运行一次，然后刷新一次就能看到它在运行了，点击去查看详情运行情况（如果运行成功并且你配置了电报机器人通知你会收到`AutoApiSecret]已成功调用30次，结束时间为...`
+* 第五步，点击`Actions`，All Workflows下点击`Auto Api Secret`就能看到`Run workflow`按钮，点击就可手动运行一次，然后刷新一次就能看到它在运行了，点击去查看详情运行情况（如果运行成功并且你配置了电报机器人通知你会收到`[AutoApiSecret]已成功调用30次，结束时间为...`
 
 （必需点进去Test Api看下，api有没有调用到位，有没有出错。外面的Auto Api打勾只能说明运行是正常的，我们还需要确认10个api调用成功了，默认是执行三遍，也就是要看到调用成功30个，就像图里的一样。如果少了几个api，要么是注册应用的时候赋予api权限没弄好；要么是没登录激活onedrive，登录激活一下）
 
